@@ -1,45 +1,56 @@
 #include "sort.h"
 
-listint_t *swap(listint_t **list, listint_t *current, listint_t *next) {
-    /**
-     *  x y left curr next right
-     *  x y left next curr right
-     *
-     *
-     * left = curr.prev
-     * right = next.next
-     *
-     * next.next = curr
-     * next.prev = left
-     *
-     * curr.next = right
-     * curr.prev = next
-     *
-     * left.next = next
-     * right.prev = curr
-     *
-     */
+
+/**
+ * swap - Redirecting the pointers of two nodes
+ *
+ * @list: Linked list
+ * @current: Current node to swap (src)
+ * @next: Destination node
+ *
+ * Return: Left node of the actual node
+ */
+listint_t *swap(listint_t **list, listint_t *current, listint_t *next)
+{
+	/**
+	 *  x y left curr next right
+	 *  x y left next curr right
+	 *
+	 *
+	 * left = curr.prev
+	 * right = next.next
+	 *
+	 * next.next = curr
+	 * next.prev = left
+	 *
+	 * curr.next = right
+	 * curr.prev = next
+	 *
+	 * left.next = next
+	 * right.prev = curr
+	 *
+	 */
 
 
-    listint_t *left, *right;
+	listint_t *left, *right;
 
-    left = current->prev, right = next->next;
+	left = current->prev, right = next->next;
 
-    next->next = current;
-    next->prev = left;
+	next->next = current;
+	next->prev = left;
 
-    current->next = right;
-    current->prev = next;
+	current->next = right;
+	current->prev = next;
 
-    if (left)
-        left->next = next;
-    else
-        *list = next;
+	if (left)
+		left->next = next;
+	else
+		*list = next;
 
-    if (right)
-        right->prev = current;
+	if (right)
+		right->prev = current;
 
-    return (left);
+	return (left);
 }
 
 
@@ -50,30 +61,33 @@ listint_t *swap(listint_t **list, listint_t *current, listint_t *next) {
  * Return: Nothing
  *
  */
-void insertion_sort_list(listint_t **list) {
-    listint_t *current, *next, *left, *tmp;
+void insertion_sort_list(listint_t **list)
+{
+	listint_t *current, *next, *left, *tmp;
 
-    if (!list || !*list)
-        return;
+	if (!list || !*list)
+		return;
 
-    for (current = *list; current; current = next) {
-        next = current->next;
+	for (current = *list; current; current = next)
+	{
+		next = current->next;
 
-        if (!next)
-            break;
+		if (!next)
+			break;
 
-        if (next && current->n < next->n)
-            continue;
+		if (next && current->n < next->n)
+			continue;
 
-        left = swap(list, current, next);
-        print_list(*list);
+		left = swap(list, current, next);
+		print_list(*list);
 
-        tmp = next;
-        while (left && tmp && left->n > tmp->n) {
-            left = swap(list, left, tmp);
-            print_list(*list);
-            tmp = left ? left->next : NULL;
-        }
+		tmp = next;
+		while (left && tmp && left->n > tmp->n)
+		{
+			left = swap(list, left, tmp);
+			print_list(*list);
+			tmp = left ? left->next : NULL;
+		}
+	}
 
-    }
 }
