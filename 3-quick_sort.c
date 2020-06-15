@@ -1,7 +1,13 @@
 #include "sort.h"
 #include <stdlib.h>
-
-
+/**
+ * swap - waps two values
+ * @a: first value
+ * @b: second value
+ *
+ * Return: Nothing
+ *
+ */
 void swap(int *a, int *b)
 {
 	int aux;
@@ -10,7 +16,15 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = aux;
 }
-
+/**
+ * lomuto_partition - bifurcate the array
+ * @array: information of the array
+ * @size: size of the array
+ * @low: low value
+ * @high: high value
+ *
+ * Return: int i
+ */
 int lomuto_partition(int *array, size_t size, int low, int high)
 {
 	int i, j, piv;
@@ -36,7 +50,16 @@ int lomuto_partition(int *array, size_t size, int low, int high)
 
 	return (i + 1);
 }
-
+/**
+ * sort - sorts an array
+ * @array: information of the array
+ * @size: size of the array
+ * @low: low value
+ * @high: high value
+ *
+ * Return: Nothing
+ *
+ */
 void sort(int *array, size_t size, int low, int high)
 {
 	if (low < high)
@@ -48,7 +71,14 @@ void sort(int *array, size_t size, int low, int high)
 	}
 }
 
-
+/**
+ * quick_sort - quick sort methodology
+ * @array: array's information
+ * @size: size of the array
+ *
+ * Return: Nothing
+ *
+ */
 void quick_sort(int *array, size_t size)
 {
 	if (!array || size < 2)
