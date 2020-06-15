@@ -12,26 +12,6 @@
  */
 listint_t *swap(listint_t **list, listint_t *current, listint_t *next)
 {
-	/**
-	 *  x y left curr next right
-	 *  x y left next curr right
-	 *
-	 *
-	 * left = curr.prev
-	 * right = next.next
-	 *
-	 * next.next = curr
-	 * next.prev = left
-	 *
-	 * curr.next = right
-	 * curr.prev = next
-	 *
-	 * left.next = next
-	 * right.prev = curr
-	 *
-	 */
-
-
 	listint_t *left, *right;
 
 	left = current->prev, right = next->next;
@@ -75,7 +55,7 @@ void insertion_sort_list(listint_t **list)
 		if (!next)
 			break;
 
-		if (next && current->n < next->n)
+		if (next && current->n <= next->n)
 			continue;
 
 		left = swap(list, current, next);
