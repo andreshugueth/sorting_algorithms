@@ -20,7 +20,7 @@ int lomuto_partition(int *array, size_t size, int low, int high)
 
 	for (j = low; j <= high - 1; j++)
 	{
-		if (array[j] >= piv)
+		if (array[j] > piv)
 			continue;
 
 		i++;
