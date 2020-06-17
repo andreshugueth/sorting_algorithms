@@ -13,5 +13,8 @@
 * The prototypes of all your functions should be included in your header file called sort.h
 * All your header files should be include guarded
 
+### Resources
+[![ALT](https://i.ytimg.com/an_webp/kPRA0W1kECg/mqdefault_6s.webp?du=3000&sqp=CKCxqvcF&rs=AOn4CLAhVO2neVC9S84yMOfBCOevP16oWA)](https://www.youtube.com/watch?v=kPRA0W1kECg)
+
 ## Contributors  
 [@Andres Hugueth - Github](https://github.com/andreshugueth) - [@David Orozco - Github](https://github.com/davixcky) 
