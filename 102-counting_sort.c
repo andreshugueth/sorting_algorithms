@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * countintg_sort - counting sort implementation
+ * counting_sort - counting sort implementation
  * @array: array's information
  * @size: size of the array
  *
