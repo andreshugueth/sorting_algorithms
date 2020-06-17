@@ -12,3 +12,6 @@
 * Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, … is totally forbidden.
 * The prototypes of all your functions should be included in your header file called sort.h
 * All your header files should be include guarded
+
+## Contributors  
+[@Andres Hugueth - Github](https://github.com/andreshugueth) - [@David Orozco - Github](https://github.com/davixcky) 
