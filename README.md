@@ -15,6 +15,8 @@
 
 ### Resources
 [![ALT](https://i.ytimg.com/an_webp/kPRA0W1kECg/mqdefault_6s.webp?du=3000&sqp=CKCxqvcF&rs=AOn4CLAhVO2neVC9S84yMOfBCOevP16oWA)](https://www.youtube.com/watch?v=kPRA0W1kECg)
+[![ALT](https://i.ytimg.com/an_webp/ZZuD6iUe3Pc/mqdefault_6s.webp?du=3000&sqp=CI2iqvcF&rs=AOn4CLCmTTMWuX_wMgXaGyz6tpP2IycMmQ)](https://www.youtube.com/watch?v=ZZuD6iUe3Pc)
+
 
 ## Contributors  
 [@Andres Hugueth - Github](https://github.com/andreshugueth) - [@David Orozco - Github](https://github.com/davixcky) 
