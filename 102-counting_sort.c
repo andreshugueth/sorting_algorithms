@@ -34,10 +34,8 @@ void counting_sort(int *array, size_t size)
 	}
 	for (i = 0; i <= k; i++)
 		count_array[i] = 0;
-
 	for (j = 0; j < size; j++)
 		count_array[array[j]] += 1;
-
 	for (i = 1; i <= k; i++)
 	{
 		swap = count_array[i];
@@ -51,4 +49,5 @@ void counting_sort(int *array, size_t size)
 	}
 	print_array(count_array, k + 1);
 	free(count_array);
+	free(output);
 }
